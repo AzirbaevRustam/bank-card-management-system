@@ -97,3 +97,4 @@
     mvn test
     ```
     В проекте есть тесты как для слоя сервиса (`src/test/java/com/example/bankcards/service`), так и для REST API (`src/test/java/com/example/bankcards/controller`).
+* 
