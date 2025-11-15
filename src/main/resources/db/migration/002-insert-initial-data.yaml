@@ -1,0 +1,27 @@
+databaseChangeLog:
+  - changeSet:
+      id: 002-1-insert-admin-user
+      author: your_name
+      changes:
+        - insert:
+            tableName: users
+            columns:
+              - column: {name: id, value: 1}
+              - column: {name: username, value: admin}
+              - column: {name: password, value: $2a$10$8.UnVuG9HHgffUDAlk8qfOuWp6V3l0x4Uq9HZ6oB6npdM.t.CJ.1a}
+              - column: {name: email, value: admin@bank.com}
+
+  - changeSet:
+      id: 002-2-insert-roles
+      author: your_name
+      changes:
+        - insert:
+            tableName: user_roles
+            columns:
+              - column: {name: user_id, value: 1}
+              - column: {name: role, value: ROLE_ADMIN}
+        - insert:
+            tableName: user_roles
+            columns:
+              - column: {name: user_id, value: 1}
+              - column: {name: role, value: ROLE_USER}
